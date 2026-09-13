@@ -7,8 +7,8 @@
 VantageNav is a training-free framework that actively acquires complementary views of a suspected target, verifies the instance with multiple visual routes, and navigates to the position and heading represented by the goal image.
 
 <p>
-  <a href="VantageNav_paper.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/Paper-PDF-b31b1b"></a>
-  <a href="https://github.com/Jin-zhiwen/apexuni"><img alt="Code" src="https://img.shields.io/badge/Code-ApexNav-2563eb"></a>
+  <img alt="Paper" src="https://img.shields.io/badge/Paper-Coming%20soon-b31b1b">
+  <img alt="Code" src="https://img.shields.io/badge/Code-Coming%20soon-2563eb">
   <a href="index.html"><img alt="Project page" src="https://img.shields.io/badge/Project%20Page-VantageNav-7c3aed"></a>
   <a href="https://github.com/Jin-zhiwen/real_world_display"><img alt="Media" src="https://img.shields.io/badge/Media-GitHub%20playback-0f766e"></a>
 </p>
@@ -158,11 +158,9 @@ Two additional archived RViz recordings are kept in [`videos/`](videos/) for com
 
 ## Paper and code
 
-- [Read the VantageNav paper](VantageNav_paper.pdf)
-- [Open the implementation repository](https://github.com/Jin-zhiwen/apexuni)
-- [Browse all videos and figures](https://github.com/Jin-zhiwen/real_world_display/tree/main)
+The paper and implementation are coming soon. This repository currently provides the project page, experiment videos, and method figures.
 
-This repository is the media and project page for VantageNav. The implementation, launch files, configuration, and experiment scripts live in the linked ApexNav repository.
+- [Browse all videos and figures](https://github.com/Jin-zhiwen/real_world_display/tree/main)
 
 ## Limitations
 
