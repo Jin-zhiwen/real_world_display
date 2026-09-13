@@ -95,6 +95,8 @@ The reel contains successful GO2 trials for plant, air-conditioner, and sink tar
 
 ### Simulation: Habitat / RViz trajectories
 
+The RViz clips below are trimmed to the active navigation interval so the startup wait and post-run reset are not shown.
+
 <table>
   <tr>
     <td width="50%" align="center">
@@ -113,8 +115,6 @@ The reel contains successful GO2 trials for plant, air-conditioner, and sink tar
     </td>
   </tr>
 </table>
-
-Two additional archived RViz recordings are kept in [`videos/`](videos/) for comparison: [recording 1](videos/screen-recording-2026-06-14-22-29-14.webm) and [recording 2](videos/screen-recording-2026-06-14-22-35-11.webm).
 
 ## Method in four steps
 
