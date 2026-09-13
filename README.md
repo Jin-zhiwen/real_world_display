@@ -67,28 +67,28 @@ The reel contains successful GO2 trials for plant, air-conditioner, and sink tar
 <table>
   <tr>
     <td width="33%" align="center">
-      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/plant_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/plant_navigation.mp4">
-        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/plant_navigation.mp4" type="video/mp4">
-        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/plant_navigation.mp4">Open the plant clip on GitHub</a>
+      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/plant_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/plant_navigation.mp4?v=3a4718b">
+        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/plant_navigation.mp4?v=3a4718b" type="video/mp4">
+        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/plant_navigation.mp4?v=3a4718b">Open the plant clip on GitHub</a>
       </video><br>
       <strong>Plant</strong><br>
-      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/plant_navigation.mp4">Open file page</a>
+      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/plant_navigation.mp4?v=3a4718b">Open file page</a>
     </td>
     <td width="33%" align="center">
-      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/air_conditioner_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/air_conditioner_navigation.mp4">
-        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/air_conditioner_navigation.mp4" type="video/mp4">
-        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/air_conditioner_navigation.mp4">Open the air-conditioner clip on GitHub</a>
+      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/air_conditioner_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/air_conditioner_navigation.mp4?v=3a4718b">
+        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/air_conditioner_navigation.mp4?v=3a4718b" type="video/mp4">
+        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/air_conditioner_navigation.mp4?v=3a4718b">Open the air-conditioner clip on GitHub</a>
       </video><br>
       <strong>Air conditioner</strong><br>
-      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/air_conditioner_navigation.mp4">Open file page</a>
+      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/air_conditioner_navigation.mp4?v=3a4718b">Open file page</a>
     </td>
     <td width="33%" align="center">
-      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/sink_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/sink_navigation.mp4">
-        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/sink_navigation.mp4" type="video/mp4">
-        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/sink_navigation.mp4">Open the sink clip on GitHub</a>
+      <video controls playsinline preload="metadata" width="100%" poster="assets/real_world/sink_goal.png" src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/sink_navigation.mp4?v=3a4718b">
+        <source src="https://raw.githubusercontent.com/Jin-zhiwen/real_world_display/main/videos/sink_navigation.mp4?v=3a4718b" type="video/mp4">
+        <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/sink_navigation.mp4?v=3a4718b">Open the sink clip on GitHub</a>
       </video><br>
       <strong>Sink</strong><br>
-      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/sink_navigation.mp4">Open file page</a>
+      <a href="https://github.com/Jin-zhiwen/real_world_display/blob/main/videos/sink_navigation.mp4?v=3a4718b">Open file page</a>
     </td>
   </tr>
 </table>
