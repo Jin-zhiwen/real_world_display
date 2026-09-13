@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VantageNav: active multi-view instance verification and goal-viewpoint alignment for zero-shot instance ImageGoal navigation.">
+  <meta name="theme-color" content="#142033">
+  <title>VantageNav | Active Multi-View Instance Verification</title>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="#top">VantageNav<span class="wordmark-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#method">Method</a>
+        <a href="#experiments">Experiments</a>
+        <a href="#videos">Videos</a>
+        <a class="nav-repo" href="https://github.com/Jin-zhiwen/real_world_display">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow">Zero-shot instance ImageGoal navigation</p>
+      <h1>VantageNav</h1>
+      <p class="hero-title">Active Multi-View<span class="mobile-break"><br></span> Instance Verification and<span class="mobile-break"><br></span> Goal-Viewpoint Alignment</p>
+      <p class="hero-lede">A training-free navigation system<span class="mobile-break"><br></span> that moves to learn, verifies the<span class="mobile-break"><br></span> target instance with complementary<span class="mobile-break"><br></span> evidence, and stops at the position<span class="mobile-break"><br></span> and heading represented by the<span class="mobile-break"><br></span> goal image.</p>
+      <div class="hero-actions" aria-label="Project links">
+        <a class="button button-primary" href="VantageNav_paper.pdf">Read the paper <span aria-hidden="true">&rarr;</span></a>
+        <a class="button button-secondary" href="https://github.com/Jin-zhiwen/apexuni">Implementation</a>
+        <a class="button button-quiet" href="README.md">Detailed README</a>
+      </div>
+      <div class="hero-metrics" aria-label="Headline results">
+        <div class="hero-metric"><strong>72.0%</strong><span>simulation SR</span></div>
+        <div class="hero-metric"><strong>31.2%</strong><span>simulation SPL</span></div>
+        <div class="hero-metric"><strong>52.52%</strong><span>view success</span></div>
+        <div class="hero-metric"><strong>4 / 4</strong><span>real-world trials</span></div>
+      </div>
+    </section>
+
+    <section class="teaser-band" id="videos" aria-labelledby="teaser-title">
+      <div class="shell">
+        <div class="video-frame video-frame-large">
+          <video id="teaser-title" poster="assets/figures/real_world_demo_poster.jpg" controls playsinline preload="metadata">
+            <source src="videos/real_world_demo.mp4" type="video/mp4">
+            Your browser does not support inline video. <a href="videos/real_world_demo.mp4">Open the demo video</a>.
+          </video>
+        </div>
+        <p class="video-caption"><span class="caption-label">Real-world demo reel</span> Unitree GO2 navigation with the goal image, onboard RGB observation, and online map visible throughout the run.</p>
+      </div>
+    </section>
+
+    <section class="section shell" id="overview">
+      <div class="section-heading">
+        <p class="section-kicker">01 / Overview</p>
+        <h2>From a goal image to a fixed, view-aligned endpoint.</h2>
+        <p>VantageNav separates discovery from confirmation. Semantic evidence decides where to look; active motion provides complementary views; geometric verification decides whether the candidate is the requested instance; and a one-shot local-to-world transform locks the final goal.</p>
+      </div>
+      <figure class="wide-figure">
+        <img src="assets/figures/method_overview.png" alt="VantageNav method overview showing active inspection, adaptive confirmation, and fixed-goal execution" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="results-band" id="experiments" aria-labelledby="results-title">
+      <div class="shell">
+        <div class="section-heading section-heading-light">
+          <p class="section-kicker">02 / Evidence</p>
+          <h2 id="results-title">Reliable search is only half the task.</h2>
+          <p>We evaluate both whether the target is found and whether the robot recovers the observation viewpoint associated with the goal image.</p>
+        </div>
+        <div class="results-grid">
+          <div class="result-item"><strong>1,000</strong><span>HM3D InstanceImageNav v3 episodes</span></div>
+          <div class="result-item"><strong>72.0%</strong><span>success rate (SR)</span></div>
+          <div class="result-item"><strong>31.2%</strong><span>success weighted by path length (SPL)</span></div>
+          <div class="result-item"><strong>52.52%</strong><span>view success at 0.25 m / 10 deg</span></div>
+        </div>
+        <div class="real-world-summary">
+          <div><span class="summary-label">Real-world deployment</span><strong>100% SR across 4 trials</strong></div>
+          <div><span class="summary-label">Average SPL</span><strong>53.2%</strong></div>
+          <div><span class="summary-label">Average travel</span><strong>13.50 m in 158 s</strong></div>
+        </div>
+        <details class="trial-details">
+          <summary>Show per-trial measurements</summary>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Trial</th><th>Distance</th><th>SPL</th><th>Time</th><th>Position error</th><th>Yaw error</th></tr></thead>
+              <tbody>
+                <tr><td>Episode 1</td><td>14.30 m</td><td>77.90%</td><td>140 s</td><td>0.54 m</td><td>10 deg</td></tr>
+                <tr><td>Episode 2</td><td>18.05 m</td><td>36.29%</td><td>253 s</td><td>0.37 m</td><td>25 deg</td></tr>
+                <tr><td>Episode 3</td><td>13.02 m</td><td>54.04%</td><td>153 s</td><td>0.16 m</td><td>6 deg</td></tr>
+                <tr><td>Episode 4</td><td>8.61 m</td><td>44.65%</td><td>87 s</td><td>0.85 m</td><td>5 deg</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section shell" id="method">
+      <div class="section-heading">
+        <p class="section-kicker">03 / Method</p>
+        <h2>Four pieces that close the discovery-to-alignment loop.</h2>
+        <p>Each module addresses a failure mode that appears when the target is small, partially occluded, viewed from the wrong side, or confused with a similar instance.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-item">
+          <div class="method-number">01</div>
+          <h3>Goal-conditioned evidence</h3>
+          <p>Full-frame relevance guides exploration while crop-level evidence is fused into a world-frame candidate map.</p>
+          <img src="assets/figures/01_evidence_maps.png" alt="Goal-conditioned evidence and dual-scale semantic maps" loading="lazy">
+        </article>
+        <article class="method-item">
+          <div class="method-number">02</div>
+          <h3>Active complementary views</h3>
+          <p>Candidate geometry proposes viewpoints filtered by free space, visibility, reachability, distance, and angular diversity.</p>
+          <img src="assets/figures/02_active_viewpoints.png" alt="Active complementary viewpoint inspection" loading="lazy">
+        </article>
+        <article class="method-item">
+          <div class="method-number">03</div>
+          <h3>Multi-route confirmation</h3>
+          <p>Region matching, detector-independent full-frame matching, and temporal stability share one geometric quality gate.</p>
+          <img src="assets/figures/03_multiroute_confirmation.png" alt="Evidence-driven multi-route target confirmation" loading="lazy">
+        </article>
+        <article class="method-item">
+          <div class="method-number">04</div>
+          <h3>Fixed goal viewpoint</h3>
+          <p>The verified local pose is transformed once into world-frame SE(2); replanning preserves the endpoint and aligns the final yaw.</p>
+          <img src="assets/figures/04_fixed_terminal.png" alt="Fixed world-frame terminal goal and alignment execution" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="real-world-title">
+      <div class="section-heading">
+        <p class="section-kicker">04 / Real world</p>
+        <h2 id="real-world-title">A quadruped platform, three visible target types, one execution policy.</h2>
+        <p>The complete reel and the individual clips below show the same verification-and-alignment pipeline deployed on a Unitree GO2.</p>
+      </div>
+      <div class="video-grid video-grid-three">
+        <article class="video-card">
+          <div class="video-frame">
+            <video poster="assets/real_world/plant_goal.png" controls playsinline preload="metadata">
+              <source src="videos/plant_navigation.mp4" type="video/mp4">
+              <a href="videos/plant_navigation.mp4">Open the plant video</a>.
+            </video>
+          </div>
+          <div class="video-card-meta"><h3>Plant</h3><a href="videos/plant_navigation.mp4">Open file <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame">
+            <video poster="assets/real_world/air_conditioner_goal.png" controls playsinline preload="metadata">
+              <source src="videos/air_conditioner_navigation.mp4" type="video/mp4">
+              <a href="videos/air_conditioner_navigation.mp4">Open the air-conditioner video</a>.
+            </video>
+          </div>
+          <div class="video-card-meta"><h3>Air conditioner</h3><a href="videos/air_conditioner_navigation.mp4">Open file <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame">
+            <video poster="assets/real_world/sink_goal.png" controls playsinline preload="metadata">
+              <source src="videos/sink_navigation.mp4" type="video/mp4">
+              <a href="videos/sink_navigation.mp4">Open the sink video</a>.
+            </video>
+          </div>
+          <div class="video-card-meta"><h3>Sink</h3><a href="videos/sink_navigation.mp4">Open file <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="simulation-title">
+      <div class="section-heading section-heading-row">
+        <div><p class="section-kicker">05 / Simulation</p><h2 id="simulation-title">The same loop in Habitat and RViz.</h2></div>
+        <p>These recordings expose the map update, active inspection, and fixed terminal execution stages in simulation.</p>
+      </div>
+      <div class="video-grid video-grid-two">
+        <article class="video-card">
+          <div class="video-frame">
+            <video poster="assets/figures/simulation_episode_09_poster.jpg" controls playsinline preload="metadata">
+              <source src="videos/simulation_episode_09.mp4" type="video/mp4">
+              <a href="videos/simulation_episode_09.mp4">Open simulation episode 09</a>.
+            </video>
+          </div>
+          <div class="video-card-meta"><h3>Episode 09</h3><a href="videos/simulation_episode_09.mp4">Open file <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame">
+            <video poster="assets/figures/simulation_episode_457_poster.jpg" controls playsinline preload="metadata">
+              <source src="videos/simulation_episode_457.mp4" type="video/mp4">
+              <a href="videos/simulation_episode_457.mp4">Open simulation episode 457</a>.
+            </video>
+          </div>
+          <div class="video-card-meta"><h3>Episode 457</h3><a href="videos/simulation_episode_457.mp4">Open file <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="platform-band" aria-labelledby="platform-title">
+      <div class="shell platform-layout">
+        <div>
+          <p class="section-kicker">06 / Platform</p>
+          <h2 id="platform-title">Designed for a real robot, evaluated at the viewpoint.</h2>
+          <p>Perception, odometry, planning, and control stay modular so the terminal pose can be checked independently from ordinary navigation success.</p>
+        </div>
+        <dl class="spec-list">
+          <div><dt>Robot</dt><dd>Unitree GO2 quadruped</dd></div>
+          <div><dt>Perception</dt><dd>RealSense D435i + 4D LADAR L2</dd></div>
+          <div><dt>State</dt><dd>Point-LIO odometry</dd></div>
+          <div><dt>Planning</dt><dd>Kinodynamic A* + GCopter/MINCO</dd></div>
+          <div><dt>Control</dt><dd>MPC via Unitree GO2 SDK</dd></div>
+          <div><dt>Compute</dt><dd>RTX 4060 laptop GPU, i7-12800HX CPU</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section shell closing-section">
+      <div class="closing-copy">
+        <p class="section-kicker">VantageNav</p>
+        <h2>Move to learn. Verify with geometry. Stop at the right view.</h2>
+        <p>The current system assumes at least one reachable viewpoint with sufficient target visibility and does not correct a biased goal-view estimate after commitment. Fully occluded or interaction-dependent targets remain open challenges.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="VantageNav_paper.pdf">Read the paper <span aria-hidden="true">&rarr;</span></a>
+          <a class="button button-secondary" href="https://github.com/Jin-zhiwen/apexuni">View implementation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>VantageNav project page</span>
+      <span><a href="README.md">README</a> <span class="footer-separator">/</span> <a href="https://github.com/Jin-zhiwen/real_world_display">GitHub</a></span>
+    </div>
+  </footer>
+</body>
+</html>
